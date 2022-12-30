@@ -17,12 +17,21 @@ class Registro extends LitElement {
 
     manejador(nombre){
         return (event)=>{
-            this[nombre] = event.target.value;
+            let valor = event.target.value;
+            this[nombre] = valor;
                     }
     }
 
     guardar(){
-       let detail = {nombre:this.nombre}
+       let detail = {nombre:this.nombre, apellidos:this.apellidos, edad:this.edad}
+       let opciones = {
+              detail: detail,
+              bubbles: true,
+              composed: true
+
+       }
+         this.dispatchEvent(new CustomEvent('guardarPersona', opciones));
+       
    }
 
     
@@ -32,7 +41,7 @@ class Registro extends LitElement {
                 <label >Nombre <input @input='${this.manejador('nombre')}' .value='${this.nombre}' /> </label>
                 <label >Apellido  <input @input='${this.manejador('apellidos')}' .value='${this.apellidos}' /> </label>
                 <label >Edad <input @input='${this.manejador('edad')}' .value='${this.edad}' /> </label>
-                <button type="button" >Guardar</button>
+                <button click="${this.guardar}" type="button" >Guardar</button>
             
            </form>
         `;

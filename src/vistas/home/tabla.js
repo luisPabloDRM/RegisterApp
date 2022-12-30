@@ -7,6 +7,19 @@ class Tabla extends LitElement {
             lista: {type: Array}
         }
     }
+    static get styles(){
+        return css`
+            table{
+                border-collapse: collapse;
+            }       
+            th, td{
+                border: 1px solid black;
+                padding: 5px;
+
+
+    }
+    `
+    }
     
     render(){
         return html`
