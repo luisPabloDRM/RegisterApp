@@ -27,7 +27,7 @@ class Home extends LitElement {
     render(){
         return html`
             <wc-registro @guardarPersona="${this.agregarALista}" ></wc-registro>
-            <wc-tabla .lista= '${this.lista}'></wc-tabla>
+            <wc-tabla .lista= "${this.lista}"></wc-tabla>
         `;
     }
 }
