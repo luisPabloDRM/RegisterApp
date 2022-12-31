@@ -41,7 +41,7 @@ class Registro extends LitElement {
                 <label >Nombre <input @input='${this.manejador('nombre')}' .value='${this.nombre}' /> </label>
                 <label >Apellido  <input @input='${this.manejador('apellidos')}' .value='${this.apellidos}' /> </label>
                 <label >Edad <input @input='${this.manejador('edad')}' .value='${this.edad}' /> </label>
-                <button click="${this.guardar}" type="button" >Guardar</button>
+                <button @click="${this.guardar}" type="button" >Guardar</button>
             
            </form>
         `;
