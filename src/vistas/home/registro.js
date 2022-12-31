@@ -15,6 +15,30 @@ class Registro extends LitElement {
         this.nombre = this.apellidos = this.edad = "";
     }
 
+    static get styles(){
+        return css`
+            form{
+                display: flex;
+                flex-direction: column;
+                width: 300px;
+                margin: 0 auto;
+            }
+            label{
+                display: flex;
+                flex-direction: column;
+                margin: 10px;
+            }
+            input{
+                margin-top: 5px;
+            }
+            button{
+                margin-top: 10px;
+                width: 100px;
+                margin: 0 auto;
+            }
+        `
+    }
+
     manejador(nombre){
         return (event)=>{
             let valor = event.target.value;

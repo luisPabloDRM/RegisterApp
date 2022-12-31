@@ -11,6 +11,8 @@ class Tabla extends LitElement {
         return css`
             table{
                 border-collapse: collapse;
+                width: 100%;
+
             }       
             th, td{
                 border: 1px solid black;
