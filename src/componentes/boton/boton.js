@@ -15,7 +15,7 @@ class Boton extends LitElement {
 
     static get styles(){
         return css`
-           button{
+           .botton{
             all:initial;
             background-color: #9292b5;
             font-family:bold; 
@@ -46,7 +46,7 @@ mouseUpListener(event){
 
 render(){
         return html`
-            <button @mousedown = '${this.mouseDownListener}'
+            <button   @mousedown = '${this.mouseDownListener}'
                     @mouseup = '${this.mouseUpListener}' >
                 ${this.texto}
             </button>

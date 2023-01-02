@@ -1,30 +1,37 @@
 import {html, css, LitElement} from 'lit-element';
 
 class NavBar extends LitElement {
-    static get properties(){
-        return {
-            titulo: {type: String},
-            enlaces: {type: Array}
-        }
-    }
+   
     static get styles(){
         return css`
             .contenedor-navbar{
                 display: flex;
                 justify-content: center;
                 margin: auto;
-                background-color: blanchedalmond;
-                padding: 1px;
-            }
-        `
+                background-color: #83b983;
+                padding: 1pc;
+            }`;
     }
+
     render(){
         return html `
             <div class="contenedor-navbar">
-                <wc-boton texto="Página 1" ></wc-boton>
-                <wc-boton texto="Página 2" ></wc-boton>
-                <wc-boton texto="Página 3" ></wc-boton>
-            </div>
+                <wc-link to ="/home">
+                     <wc-boton texto="Home" ></wc-boton>
+                </wc-link>
+
+                <wc-link to ="/pagina_2" >
+                     <wc-boton texto="Página 2" ></wc-boton>
+                </wc-link>
+
+                <wc-link to ="/pagina_3" >
+                     <wc-boton texto="Página 3" ></wc-boton>
+                </wc-link>
+                    
+
+                    
+
+                </div>
         `
     }
 }
