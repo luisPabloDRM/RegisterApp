@@ -14,7 +14,7 @@ class Link extends LitElement {
             to: this.to,
             routerName: this.routerName
         };
-        this.dispatchEvent(new CustomEvent('goEvent', {detail: detail}));
+        this.dispatchEvent(new CustomEvent('goEvent', {detail: detail, bubbles: true , composed:true}));
 
     }
 

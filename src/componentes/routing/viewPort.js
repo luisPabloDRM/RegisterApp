@@ -6,6 +6,7 @@ class ViewPort extends LitElement {
         this.viewNow = "/home"
     }
     connectedCallback(){
+        super.connectedCallback();
         this.viewList = this.querySelectorAll('wc-route');
         this.renderView(this.viewNow);
     }

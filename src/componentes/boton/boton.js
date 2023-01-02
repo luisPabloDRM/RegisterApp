@@ -15,10 +15,10 @@ class Boton extends LitElement {
 
     static get styles(){
         return css`
-           .botton{
+           button{
             all:initial;
             background-color: #9292b5;
-            font-family:bold; 
+            font-family:cursive; 
             margin-right:20px;
             width: 150px;
             border-radius:10px;
